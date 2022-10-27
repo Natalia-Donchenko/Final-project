@@ -1,20 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="@@webRoot/css/main.min.css" />
-  </head>
-  <body> 
-    @@include('sections/header.html')
-    <div class="container">
-     
-      <main>
-       
-      @@include('sections/footer.html')
-    </div>
-    <script src="@@webRoot/js/test.min.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="@@webRoot/css/main.min.css" />
+</head>
+
+<body>
+  <!-- @@include('sections/header.html') -->
+  <div class="container">
+
+    <main>
+
+      <div class="cards swiper">
+        <div class="swiper-wrapper">
+          <div class="card swiper-slide">asdsdf</div>
+          <div class="card swiper-slide">sdfsdf2</div>
+          <div class="card swiper-slide">sdfsdf3</div>
+      </div>
+      <div class="cards-pagination"></div>
+        
+      </div>
+
+    </main>
+
+    @@include('sections/footer.html')
+  </div>
+  <script src="@@webRoot/js/test.min.js"></script>
+  <script src="@@webRoot/js/swiper-bundle.min.js"></script>
+  <script src="@@webRoot/js/teams-slider.min.js"></script>
+
+</body>
+
 </html>
