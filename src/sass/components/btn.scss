@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+.btn-scroll {
+  cursor: pointer;
+
+  &:hover g > * {
+    stroke: $accent-color;
+  }
+
+}
