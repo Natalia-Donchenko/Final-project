@@ -1,0 +1,96 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.clients {
+
+  &__title {
+    margin-bottom: 30px;
+    text-align: center;
+
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr;
+    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    margin-right: -30px;
+    margin-left: -30px;
+
+    // @media screen and  (min-width: 768px) {
+    //    &__list {
+    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    // }
+
+    
+
+    &-item {
+      display: flex;
+      height: 120px;
+      justify-content: center;
+      align-items: center;
+
+      &:nth-last-child(-n+6) {
+        display: none;
+      }
+     
+
+      // @media screen and  (min-width: 768px) {
+      //   &:nth-last-child(n+7) {
+      //   display: block;
+      // }
+      // }
+
+    }
+
+
+    & .client_hillel {
+      background: #1C4280;
+    }
+
+    & .client_wanna_biz {
+      background: #143646;
+    }
+
+    & .client_tapgerine {
+      background: linear-gradient(0deg, #F48B30, #F48B30), #F48B30;
+    }
+
+    & .client_3d_look {
+      background: #9E4DC3;
+    }
+
+    & .client_orangear {
+      background: #FD9339;
+    }
+
+    & .client_adtellige {
+      background: #E2E2E4;
+    }
+
+    & .client_clickky {
+      background: #C71C36;
+    }
+
+    & .client_eco_leasing {
+      background: #DCF3F9;
+    }
+
+    & .client_infatek {
+      background: #EAEAEA;
+    }
+
+    & .client_city_park {
+      background: #282240;
+    }
+
+    & .client_art_prints {
+      background: #1D4568;
+    }
+
+    & .client_ultimate {
+      background: #000000;
+    }
+
+  }
+
+}

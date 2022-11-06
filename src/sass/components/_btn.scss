@@ -1,0 +1,54 @@
+@use '../abstracts/variables' as *;
+
+.langswitcher {
+  display: flex;
+  gap: 7px;
+
+  &__language {
+    padding: 5px 7px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: #B3B3BA;
+      background-color: #F5F5FA;
+    }
+  }
+
+  & .is-active {
+    background-color: $accent-color;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+.burger {
+  padding: 0;
+  background: none;
+  border: none;
+
+  & svg {
+    stroke: rgb(255, 255, 255);
+  }
+
+  & svg:hover {
+    cursor: pointer;
+    stroke: $accent-color;
+  }
+}
+
+.btn-scroll {
+  stroke: #fff;
+
+  &:hover {
+    cursor: pointer;
+    stroke: $accent-color;
+  }
+}

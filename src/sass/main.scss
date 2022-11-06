@@ -10,10 +10,15 @@
 @use 'base/typography';
 
 @use 'layout/container';
-@use 'layout/header';
+@use 'layout/homePage/homepage_header';
+@use 'layout/homePage/homepage_experience';
+@use 'layout/homePage/homepage_team';
 @use 'layout/footer';
 @use 'layout/cards';
+@use 'layout/clients';
+@use 'layout/recommended';
 
-@use 'components/card';
+@use 'components/comparison_card';
 @use 'components/img';
 @use 'components/btn';
+@use 'components/titles';

@@ -1,0 +1,106 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  color: #FFFFFF;
+}
+
+
+h1 {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  background: $redText-color-gradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: stretch;
+
+  @include tablet-sd {
+    font-size: 38px;
+    line-height: 46px;
+  }
+
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  align-self: stretch;
+
+  @include tablet-sd {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: $active-color-regular;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $main-color-regular;
+}
+
+h6 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: $active-color-regular;
+}
+
+.suptitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $active-color-regular;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  &::after {
+    content: "\02C3";
+    margin-left: 5px;
+  }
+}
+
+.full_name {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #B3B3BA;
+}
+
+.job_title {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B3B3BA;
+}
+
+

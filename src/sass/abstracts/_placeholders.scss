@@ -1,34 +1,5 @@
 @use '../abstracts/variables' as *;
 
-%reset-h1 {
-  font-weight: 700;
-  font-size: 38px;
-  line-height: 46px;
-  color: red;
-  background-clip: text;
-}
-
-%reset-h2 {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 37px;
-  color: $main-color-regular;
-}
-
-%reset-h3 {
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  color: $main-color-regular;
-}
-
-%reset-h4 {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
-  color: $main-color-regular;
-}
-
 %reset-p {
   font-weight: 400;
   font-size: 16px;
