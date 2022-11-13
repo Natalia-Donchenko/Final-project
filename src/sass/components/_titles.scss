@@ -4,42 +4,50 @@
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 span {
   margin: 0;
+
   color: #FFFFFF;
 }
 
-
-h1 {
-  font-weight: 700;
+.primary_title {
   font-size: 38px;
   line-height: 46px;
+  font-weight: 700;
+  text-align: center;
 }
 
-h2 {
-  font-weight: 700;
+.gradient_title {
   font-size: 30px;
   line-height: 37px;
+  font-weight: 700;
+  align-self: stretch;
+
   background: $redText-color-gradient;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  align-self: stretch;
 
   @include tablet-sd {
     font-size: 38px;
     line-height: 46px;
   }
-
 }
 
-h3 {
-  font-weight: 700;
+.header__contacts-adress {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: right;
+
+  color: #B3B3BA;
+}
+
+.experience_title {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
+
   align-self: stretch;
 
   @include tablet-sd {
@@ -48,36 +56,87 @@ h3 {
   }
 }
 
-h4 {
-  font-weight: 700;
+.experience_text {
+  font-size: 19px;
+  line-height: 30px;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.comparison-card_title {
   font-size: 22px;
   line-height: 27px;
+  font-weight: 700;
+
   color: $active-color-regular;
 }
 
-h5 {
-  font-weight: 700;
+.comparison-card_text {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.clients-title {
   font-size: 14px;
   line-height: 17px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
+
   color: $main-color-regular;
 }
 
-h6 {
-  font-weight: 700;
+.recommended-card_title {
+  display: flex;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
+
   color: $active-color-regular;
 }
 
-.suptitle {
+.recommended-card-date {
+  font-size: 12px;
+  line-height: 15px;
   font-weight: 700;
-  font-size: 14px;
-  line-height: 17px;
   letter-spacing: 1px;
   text-transform: uppercase;
+
+  color: #B3B3BA;
+}
+
+.recommended-card_describe {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 400;
+
+  color: #000000;
+  border-top: 4px solid #E6E6F0;
+  ;
+}
+
+.is-active-item,
+.is-active-item_cons,
+.is-active-item_cust,
+.is-active-item_inno,
+.is-active-item_busi {
+  background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.suptitle {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
   color: $active-color-regular;
+
+  transition: $baseAnimation;
 
   &:hover {
     color: $accent-color;
@@ -90,17 +149,17 @@ h6 {
 }
 
 .full_name {
-  font-weight: 700;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
+
   color: #B3B3BA;
 }
 
 .job_title {
-  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
+  font-weight: 400;
+
   color: #B3B3BA;
 }
-
-

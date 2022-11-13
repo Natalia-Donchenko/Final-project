@@ -1,83 +1,67 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use "sass:math";
 
 .recommended {
   background-color: #F5F5FA;
 
   &__title {
-    padding: 30px 0;
+    padding: calc($baseIndent / 2) 0;
+
+    & .suptitle {
+      margin-bottom: calc($baseIndent / 12);
+
+      @include tablet-sd {
+        margin-bottom: calc($baseIndent / 6);
+      }
+    }
   }
 
   &__cards {
     display: flex;
-    padding-bottom: 30px;
+    padding-bottom: calc($baseIndent / 2);
+    gap: calc($baseIndent / 2);
     flex-wrap: wrap;
-    gap: 30px;
-  
+  }
 
-    & a {
-      margin-bottom: 5px;
+  &-card {
+    padding: calc($baseIndent / 2);
+    overflow: hidden;
+
+    border-radius: 8px;
+    background-color: #FFFFFF;
+
+    @include tablet-sd {
+      flex: 1 1 calc(50% - 30px);
     }
 
-    &-card {
-      padding: 30px;
-      border-radius: 8px;
+    @include tablet-hd {
+      flex: 1 1 calc(100% / 3 - 30px);
+    }
+
+
+    &_img {
+      width: calc(100% + $baseIndent);
+      height: 200px;
+      margin-top: math.div(-$baseIndent, 2);
+      margin-bottom: calc($baseIndent / 2);
+      margin-left: math.div(-$baseIndent, 2);
       overflow: hidden;
-      background-color: #FFFFFF;;
-      // flex: 1 1 calc(50% - 30px);
-    
 
-      &_img {
-        margin-top: -30px;
-        margin-left: -30px;
-        margin-bottom: 30px;
-        width: calc(100% + 60px);
-        overflow: hidden;
-
-        & img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
       }
+    }
 
-      &_title {
-        margin-bottom: 15px;
-      }
+    &_title {
+      margin-bottom: calc($baseIndent / 4);
+    }
 
-      &-date {
-        font-weight: 700;
-        font-size: 12px;
-        line-height: 15px;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: #B3B3BA;
-      }
-    
-      &_describe {
-        margin-top: 15px;
-        padding-top: 15px;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 22px;
-        color: #000000;
-        border-top: 4px solid #E6E6F0;;
-      }
-
+    &_describe {
+      margin-top: calc($baseIndent / 4);
+      padding-top: calc($baseIndent / 4);
     }
   }
 }
-
-// &_photo {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin-top: -30px;
-//   margin-left: -30px;
-//   margin-bottom: 30px;
-
-//   & img{
-//     width: calc(100% + 60px);
-
-//   }
-// }

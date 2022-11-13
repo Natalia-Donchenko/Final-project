@@ -1,77 +1,215 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use "sass:math";
 
 .footer {
   background-color: #F5F5FA;
 
   &__items {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    padding: calc($baseIndent / 2);
+    grid-template-areas:
+      "place"
+      "contacts"
+      "promo";
     align-items: center;
-    border-top: 2px solid  #E6E6F0;
-    padding: 30px;
 
-     &-place {
-      text-align: center;
+    border-top: 2px solid #E6E6F0;
+
+    @include tablet-sd {
+      padding-right: 0;
+      padding-left: 0;
+      grid-row-gap: calc($baseIndent / 3);
+      grid-template-areas:
+        "place promo"
+        "contacts contacts";
+    }
+
+    &-place {
       margin-bottom: 21px;
+      text-align: center;
+      grid-area: place;
+
+      @include tablet-sd {
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+      }
 
       &_adress {
-        margin-bottom: 10px;
-        font-weight: 400;
+        margin-bottom: calc($baseIndent / 6);
+
         font-size: 16px;
         line-height: 20px;
+        font-weight: 400;
+
         color: $main-color-regular;
+
+        @include tablet-sd {
+          margin-bottom: 0;
+        }
       }
 
       &_map {
-        font-weight: 700;
         font-size: 12px;
         line-height: 15px;
+        font-weight: 700;
         letter-spacing: 1px;
         text-transform: uppercase;
+
         color: $active-color-regular;
 
+        transition: $baseAnimation;
+
+        &:hover {
+          color: $accent-color;
+        }
+
+        @include tablet-sd {
+          display: flex;
+          padding-top: 1px;
+          align-items: center;
+
+          line-height: 10px;
+
+        }
+
+        @include tablet-hd {
+          line-height: 0px;
+        }
+
+        &::before {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: #B3B3BA;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+          }
+        }
+
+        &::after {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: #B3B3BA;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+          }
+        }
       }
     }
-  
+
     &-contacts {
       display: flex;
-      flex-direction: column;
+      margin-bottom: calc($baseIndent / 2);
+      gap: calc($baseIndent / 6);
       align-items: center;
-      gap: 10px;
-      margin-bottom: 30px;
-  
+      grid-area: contacts;
+      flex-direction: column;
+
+      @include tablet-sd {
+        margin-bottom: 0;
+        gap: 0;
+        flex-direction: row;
+        justify-content: flex-start;
+      }
+
       &_icon {
         width: 39px;
         height: 38px;
 
-        & svg {
-          --footer_fb_color: #24A3FF;
-          width: 39px;
-          height: 38px;
+        & .fotter_bf-icon {
+          width: 100%;
+          height: 100%;
+
+          --fb_color: #24A3FF;
+
+          transition: $baseAnimation;
 
           &:hover {
-            --footer_fb_color: #F0145A;
+            --fb_color: #F0145A;
+          }
+        }
+      }
+
+      &_call {
+        display: flex;
+
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 700;
+        text-align: right;
+
+        color: $main-color-alt;
+
+        transition: $baseAnimation;
+
+        &:hover {
+          color: $accent-color;
+        }
+
+        &::before {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: #B3B3BA;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+            align-self: center;
           }
         }
 
+        &::after {
+          content: "";
+
+          display: none;
+          width: 6px;
+          height: 6px;
+          margin-right: 10px;
+          margin-left: 10px;
+
+          background: #B3B3BA;
+          border-radius: 50%;
+
+          @include tablet-sd {
+            display: flex;
+            align-self: center;
+          }
+        }
       }
-  
-      &_call {
-        display: flex;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 20px;
-        text-align: right;
-        color: $main-color-alt;
-      }
-  
+
       &_mail {
         display: flex;
-        font-weight: 700;
+
         font-size: 16px;
         line-height: 20px;
+        font-weight: 700;
+
         color: $active-color-regular;
+
+        transition: $baseAnimation;
 
         &:hover {
           color: $accent-color;
@@ -80,12 +218,22 @@
     }
 
     &-promo {
-      font-weight: 400;
+      margin-right: math.div(-$baseIndent, 6);
+      margin-left: math.div(-$baseIndent, 6);
+      grid-area: promo;
+
       font-size: 16px;
       line-height: 20px;
+      font-weight: 400;
+      text-align: center;
+
       color: #B3B3BA;
-      margin-left: -10px;
-      margin-right: -10px;
+
+      @include tablet-sd {
+        margin: 0;
+        
+        text-align: end;
+      }
     }
   }
 }

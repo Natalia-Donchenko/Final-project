@@ -29,10 +29,16 @@
   }
 }
 
- @mixin desktop-hd {
+@mixin desktop-hd {
    @media (min-width: $desktop-hd) {
     @content;
   }
+}
+
+@mixin rotate {
+  @media (max-height: $rotate) {
+   @content;
+ }
 }
 
 

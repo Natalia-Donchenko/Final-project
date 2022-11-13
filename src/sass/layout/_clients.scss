@@ -1,27 +1,31 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
+@use "sass:math";
 
 .clients {
+  overflow-x: hidden;
 
-  &__title {
-    margin-bottom: 30px;
+  &__title-text {
+    margin-bottom: calc($baseIndent / 2);
+
     text-align: center;
-
   }
 
   &__list {
     display: grid;
+    margin-right: math.div(-$baseIndent, 2);
+    margin-left: math.div(-$baseIndent, 2);
     grid-template-columns: 1fr;
-    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    margin-right: -30px;
-    margin-left: -30px;
 
-    // @media screen and  (min-width: 768px) {
-    //    &__list {
-    // grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
-    // }
+    @include tablet-sd {
+      margin-right: -$baseIndent;
+      margin-left: -$baseIndent;
+      grid-template-columns: repeat(3, 1fr);
+    }
 
-    
+    @include tablet-hd {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
     &-item {
       display: flex;
@@ -31,17 +35,12 @@
 
       &:nth-last-child(-n+6) {
         display: none;
+
+        @include tablet-sd {
+          display: flex;
+        }
       }
-     
-
-      // @media screen and  (min-width: 768px) {
-      //   &:nth-last-child(n+7) {
-      //   display: block;
-      // }
-      // }
-
     }
-
 
     & .client_hillel {
       background: #1C4280;
@@ -90,7 +89,5 @@
     & .client_ultimate {
       background: #000000;
     }
-
   }
-
 }

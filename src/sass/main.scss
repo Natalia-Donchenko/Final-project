@@ -8,17 +8,15 @@
 @use 'base/normalize';
 @use 'base/reset';
 @use 'base/typography';
+@use 'base/container';
 
-@use 'layout/container';
 @use 'layout/homePage/homepage_header';
-@use 'layout/homePage/homepage_experience';
 @use 'layout/homePage/homepage_team';
 @use 'layout/footer';
-@use 'layout/cards';
+@use 'layout/header';
 @use 'layout/clients';
 @use 'layout/recommended';
+@use 'layout/comparison';
 
-@use 'components/comparison_card';
-@use 'components/img';
 @use 'components/btn';
 @use 'components/titles';

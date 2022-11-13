@@ -1,113 +1,53 @@
-<!-- <div class="homepage-header">
-  <div class="container">
+<header class="header">
+  <div class="header__contacts">
+    <div class="langswitcher" id="langswitcher">
+      <a class="langswitcher__language" id="uk">ук</a>
+      <a class=" langswitcher__language" id="ru">ру</a>
+      <a class="langswitcher__language" id="en">en</a>
+    </div>
+    <a class="header__contacts-adress" href="https://www.google.com/maps/place/%D1%83%D0%BB.+%D0%9C%D0%B5%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0,+14%2F1,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.436795,30.532705,17z/data=!3m1!4b1!4m6!3m5!1s0x40d4cf07295b8e39:0x17b2112e2dc0e7a!8m2!3d50.436795!4d30.532705!16s%2Fg%2F11c5mrd800" target="_blank">Kyiv, Mechnikova str, 14/1</a>
 
-    <div class="homepage-header__hero">
-      <header class="header">
+    <a class="header__contacts-call" href="tel:0800211927">0800 211 927</a>
 
-        <div class="header__contacts">
-          <div class="langswitcher">
-            <a class="langswitcher__language">ук</a>
-            <a class=" langswitcher__language">ру</a>
-            <a class="langswitcher__language is-active">en</a>
-          </div>
-          <div class="header__contacts-adress">Kyiv, Mechnikova str, 14/1</div>
+    <a class="header__contacts-fb" href="https://www.facebook.com/" target="_blank">
+      <svg class="header__contacts-fb_icon">
+        <use xlink:href="#header_fb"></use>
+      </svg>
+    </a>
+  </div>
 
-          <a class="header__contacts-call" href="tel:0800 211 927">0800 211 927</a>
+  <a class="header__logo" href="#">
+    <img src="../dist/img/Logo.svg" alt="logo"></a>
 
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#facebook"></use>
-          </svg>
-        </div>
+  <div class="header__menu-wrapper header__menu-wrapper_show" id="header__menu-wrapper">
 
-        <a class="header__logo" href="#"><img src="./img/Logo.svg" alt="logo"></a>
-
-        <nav class="header__menu">
-          <ul class="header__menu-list">
-            <li><a href="#"></a>about us</li>
-            <li><a href="#"></a>services</li>
-            <li><a href="#"></a>team</li>
-            <li><a href="#"></a>publications</li>
-            <li><a href="#"></a>contact</li>
-          </ul>
-          <button class="burger">
-            <svg>
-              <use xlink:href="#burger"></use>
-            </svg>
-          </button>
-          
-        </nav>
-
-      </header>
-      <div class="homepage-header__hero-title">
-        <h1>you legal solutions provider</h1>
-        <svg class="btn-scroll">
-          <use xlink:href="#scroll"></use>
+    <div class="header__menu header__menu_show">
+      <button class="close" id="close">
+        <svg class="close-icon" viewBox="0 0 32 32">
+          <use xlink:href="#close-icon"></use>
         </svg>
-      </div>
-    </div>
+      </button>
 
-    <div class="homepage-header__experience">
-      <ul class= "homepage-header__experience-list">
-        <li class="is-active"><a href="#"></a>Consistent</li>
-        <li><a href="#"></a>Customer oriented</li>
-        <li><a href="#"></a>Innovative</li>
-        <li><a href="#"></a>Business oriented</li>
-      </ul>
-      <div class= "homepage-header__experience-describe">
-        <h3>We turn the idea of legal services</h3>
-        <p>Consolidating many years of experience and practice, the company's lawyers accompany complex projects and achieve a number of important decisions for the industry. Many of them form the practice of applying the law of the sea in Ukraine.</p>
-      </div>
-    </div>
-
-    <div class="homepage-header__comparison">
-      <a class="suptitle" href="#">Services</a>
-      <h2>What can we do better than others?</h2>
-      <div class="homepage-header__comparison-cards">
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/ecommerce.svg" alt="icon">
-          </div>
-          <h4>IT and e-commerce</h4>
-          <p>An endless stream of contracts, tax issues, labor relations, corporate papers - legal work distracts you from doing business. But there is not much work to do to hire an in-house lawyer.</p>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/support.svg" alt="icon">
-          </div>
-          <h4>Comprehensive daily legal support</h4>
-          <p>In addition, over time, the work will become the same type and uninteresting for a full-time lawyer. And we know very well how difficult it is to find a good candidate with experience in the field of information technology in Ukraine.</p>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/coprorate.svg" alt="icon">
-          </div>
-          <h4>Structuring corporate relationships</h4>
-          <p>Instead of just providing legal services, we will hire a lawyer or a whole team that will fit into the daily life of your company.</p>
-        </div> 
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/trust.svg" alt="icon">
-          </div>
-          <h4>Building contractual relations</h4>
-          <p>Once a week, or week after month, you have your own lawyer by your side. Anyone in the company can catch it at the coffee maker and just talk about current affairs instead of waiting for update status.</p>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/protection.svg" alt="icon"> 
-          </div>
-          <h4>Protection of business, intellectual property</h4>
-          <p>And all the other time he will work on new diverse projects, so he will definitely not stop in professional development. One way or another, all Axon Partners will work for you instead of a corporate lawyer.</p>
-        </div>
-        <div class="comparison-card">
-          <div class="comparison-card__icon-wrapper">
-            <img src="img/icons/court.svg" alt="icon">
-          </div>
-          <h4>Judicial representation</h4>
-          <p>Is it a small, medium-sized company or a market leader? Local business or multinational company? Do you have your own legal department or not?</p>
-        </div>
-        <div>
-      </div>
+      <nav class="header__menu-list">
+        <ul class="header__menu-list_items">
+          <li class="menu-item"><a href="#"></a>about us</li>
+          <li class="menu-item"><a href="#"></a>services</li>
+          <li class="menu-item"><a href="#"></a>team</li>
+          <li class="menu-item"><a href="#"></a>publications</li>
+          <li class="menu-item"><a href="#"></a>contact</li>
+        </ul>
+      </nav>
     </div>
 
   </div>
-</div> -->
+  
+  <div class="burger__wrapper">
+
+    <button class="burger" id="burger">
+      <svg class="burger-icon" viewBox="0 0 32 33">
+        <use xlink:href="#burger-icon"></use>
+      </svg>
+    </button>
+
+  </div>
+</header>
