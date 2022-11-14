@@ -1,0 +1,53 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.services-header {
+  position: relative;
+
+  height: 100%;
+  margin-bottom: 50px;
+
+
+  background: $supersoft-color-gradient;
+  border-radius: 0px 0px 12px 12px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 40px;
+    bottom: -20px;
+    right: 40px;
+
+    height: 10px;
+
+    background: #E7E7F2;
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    left: 20px;
+    bottom: -10px;
+    right: 20px;
+
+    height: 10px;
+
+    background: #CACADB;
+    border-radius: 0px 0px 12px 12px;
+  }
+
+  &__comparation {
+    padding-top: 132px;
+
+    & .suptitle {
+      display: none;
+    }
+  }
+
+  .is-active_services {
+    color: $accent-color;
+  }
+}

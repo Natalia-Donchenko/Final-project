@@ -4,8 +4,12 @@
 
 .comparison {
 
+  & .suptitle {
+    margin-bottom: calc($baseIndent / 6);
+  }
+
   & .gradient_title {
-    margin-top: calc($baseIndent / 6);
+    
     margin-bottom: calc($baseIndent / 2);
 
     @include tablet-hd {

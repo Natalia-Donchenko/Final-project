@@ -3,6 +3,7 @@
 @use "sass:math";
 
 .clients {
+  padding-top: calc($baseIndent / 2);
   overflow-x: hidden;
 
   &__title-text {

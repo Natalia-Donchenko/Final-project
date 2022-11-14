@@ -9,6 +9,7 @@
 
   display: grid;
   max-width: 100vw;
+  grid-template-columns: repeat(2, 1fr);
   gap: calc($baseIndent / 4);
   grid-template-areas:
     "contacts contacts"
@@ -16,12 +17,12 @@
 
   @include tablet-sd {
     padding: 50px $baseIndent 0;
+    grid-template-columns: 1fr;
     gap: calc($baseIndent / 2);
     grid-template-areas:
       "contacts"
       "logo"
       "menu";
-    justify-content: flex-start;
 
     @include rotate {
       padding-top: 20px;
@@ -31,11 +32,11 @@
   @include tablet-hd {
     column-gap: 0;
     row-gap: 16px;
+    grid-template-columns: repeat(2, minmax);
     grid-template-areas:
       "logo contacts"
       "logo menu";
-    justify-content: space-between;
-    align-items: center;
+    align-self: center;
   }
 
   .burger__wrapper {
