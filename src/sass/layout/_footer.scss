@@ -29,6 +29,7 @@
       margin-bottom: 21px;
       text-align: center;
       grid-area: place;
+      
 
       @include tablet-sd {
         display: flex;
@@ -36,47 +37,18 @@
         align-items: center;
       }
 
-      &_adress {
+      .adress {
+        
         margin-bottom: calc($baseIndent / 6);
-
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 400;
-
-        color: $main-color-regular;
 
         @include tablet-sd {
           margin-bottom: 0;
         }
+
       }
 
-      &_map {
-        font-size: 12px;
-        line-height: 15px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-
-        color: $active-color-regular;
-
-        transition: $baseAnimation;
-
-        &:hover {
-          color: $accent-color;
-        }
-
-        @include tablet-sd {
-          display: flex;
-          padding-top: 1px;
-          align-items: center;
-
-          line-height: 10px;
-
-        }
-
-        @include tablet-hd {
-          line-height: 0px;
-        }
+      .map {
+        
 
         &::before {
           content: "";
@@ -129,39 +101,9 @@
         justify-content: flex-start;
       }
 
-      &_icon {
-        width: 39px;
-        height: 38px;
-
-        & .fotter_bf-icon {
-          width: 100%;
-          height: 100%;
-
-          --fb_color: #24A3FF;
-
-          transition: $baseAnimation;
-
-          &:hover {
-            --fb_color: #F0145A;
-          }
-        }
-      }
-
-      &_call {
+      .call {
         display: flex;
 
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 700;
-        text-align: right;
-
-        color: $main-color-alt;
-
-        transition: $baseAnimation;
-
-        &:hover {
-          color: $accent-color;
-        }
 
         &::before {
           content: "";
@@ -200,20 +142,10 @@
         }
       }
 
-      &_mail {
+      .mail {
         display: flex;
 
-        font-size: 16px;
-        line-height: 20px;
-        font-weight: 700;
-
-        color: $active-color-regular;
-
-        transition: $baseAnimation;
-
-        &:hover {
-          color: $accent-color;
-        }
+        
       }
     }
 

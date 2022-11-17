@@ -4,9 +4,24 @@
 
 .recommended {
   background-color: #F5F5FA;
+ 
+
+  & .container {
+
+    padding-top: calc($baseIndent / 2);
+    padding-bottom: calc($baseIndent / 2);
+  }
+
+  &__top-buttons {
+    margin: 0 auto calc($baseIndent / 2);
+  }
+
+  &__button-btn {
+    margin: 0 auto;
+  }
 
   &__title {
-    padding: calc($baseIndent / 2) 0;
+    padding: 0 0 calc($baseIndent / 2);
 
     & .suptitle {
       margin-bottom: calc($baseIndent / 12);
@@ -19,9 +34,9 @@
 
   &__cards {
     display: flex;
-    padding-bottom: calc($baseIndent / 2);
     gap: calc($baseIndent / 2);
     flex-wrap: wrap;
+
   }
 
   &-card {
@@ -64,4 +79,9 @@
       padding-top: calc($baseIndent / 4);
     }
   }
+
+  &__button-btn {
+    margin-top: calc($baseIndent / 2);;
+  }
+
 }

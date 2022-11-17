@@ -1,0 +1,150 @@
+@use '../../abstracts/variables' as *;
+@use '../../abstracts/mixins' as *;
+@use "sass:math";
+
+.contacts__wrapper {
+  margin-top: -50px;
+  position: relative;
+
+
+  .container {
+
+
+    padding-top: 102px;
+
+    @include tablet-sd {
+      padding-top: 220px;
+    }
+
+    @include tablet-hd {
+      padding-top: 116px;
+    }
+
+  }
+
+  .comunication {
+ 
+    padding: 60px 0;
+
+    display: flex;
+    flex-direction: column;
+
+    @include tablet-sd {
+      padding-top: 60px;
+    }
+
+    @include tablet-hd {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    @include desktop-sd {
+      padding-left: 120px;
+      padding-right: 120px;
+    }
+
+    .contacts {
+
+      padding-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      @include tablet-hd {
+        padding-bottom: 0;
+        flex-grow: 1;
+        flex: 1 1;
+        margin-right: 60px;
+      }
+
+  
+
+      .adress {
+        font-weight: 400;
+        font-size: 21px;
+        line-height: 30px;
+        transition: $baseAnimation;
+
+        &:hover {
+          color: $accent-color;
+        }
+      }
+
+      &__connection {
+        padding-top: 15px;
+        display: flex;
+        flex-direction: column;
+        border-top: 4px solid #E6E6F0;
+        gap: 30px;
+
+        .call {
+          max-width: max-content;
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 30px;
+        }
+
+        .mail {
+          font-weight: 400;
+          font-size: 21px;
+          line-height: 30px;
+        }
+      }
+
+      &__fb-link {
+
+        display: flex;
+        padding-top: 30px;
+
+        color: $active-color-regular;
+
+
+        border-top: 4px solid #E6E6F0;
+
+        .fb-link {
+          display: flex;
+
+          color: $active-color-regular;
+          font-weight: 700;
+          font-size: 12px;
+          line-height: 16px;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+          max-width: 153px;
+          max-height: 38px;
+
+          transition: $baseAnimation;
+
+
+          flex-grow: 1;
+
+          align-items: flex-end;
+
+          gap: 10px;
+
+
+          .fb_icon {
+            display: flex;
+            max-width: 38px;
+            max-height: 38px;
+
+
+          }
+
+        }
+
+
+        &:hover .fb-link {
+          color: $accent-color;
+
+          & .fb_icon {
+            fill: $accent-color;
+          }
+        }
+
+      }
+
+    }
+
+
+  }
+}

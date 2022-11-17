@@ -1,0 +1,86 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.breadcrumbs {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  align-items: flex-start;
+  
+  &-item {
+
+    display: flex;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #FFFFFF;
+    min-height: 32px;
+
+
+    @include tablet-sd {
+      font-size: 36px;
+      line-height: 44px;
+      min-height: 60px;
+    }
+
+    &::before {
+      display: flex;
+
+      content: url(../img/Slash_small.svg);
+
+      margin-left: 4px;
+      margin-right: 4px;
+
+      @include tablet-sd {
+
+        content: url(../img/Slash.svg);
+        right: 45%;
+      }
+    }
+
+    &:first-child {
+      &::before {
+        content: '';
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .header-logo {
+    
+    &_link {
+      display: flex;
+     width: 70px;
+    height: 32px; 
+
+    cursor: pointer;
+
+    .header-logo_icon {
+      height: 100%;
+      --logoColor: #fff;
+    }
+
+    @include tablet-sd {
+      width: 130px;
+      height: 60px;
+    }
+    }
+    
+
+  }
+}
+
+.white-header {
+  .breadcrumbs {
+    &-item {
+      color: $main-color-regular;
+    }
+
+    .header-logo {
+      &_icon {
+        --logoColor: #323264;
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .langswitcher {
   display: flex;
@@ -17,6 +18,10 @@
 
     transition: $baseAnimation;
 
+    @include tablet-hd {
+      line-height: 11px;
+    }
+
     &:hover {
       color: #B3B3BA;
       background-color: #F5F5FA;
@@ -30,8 +35,25 @@
   }
 }
 
+.white-header {
+  .langswitcher {
+    &__language {
+      color: #B3B3BA;
+
+      &:hover {
+        background-color: white;
+
+        @include tablet-sd {
+          background-color: #F5F5FA;;
+        }
+      }
+    }
+  }
+}
+
 .burger {
   position: relative;
+  z-index: 1;
 
   width: 32px;
   height: 32px;
@@ -54,6 +76,14 @@
   &:hover {
     --burgerColor: #323264;
     background-color: #E6E6F0;
+  }
+}
+
+.white-header {
+  .burger {
+    &-icon {
+      stroke: $main-color-regular;
+    }
   }
 }
 
@@ -103,4 +133,138 @@
 
     cursor: pointer;
   }
+}
+
+.header-fb {
+  display: flex;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  width: 24px;
+    height: 24px;
+
+  &_icon {
+    width: 100%;
+    fill: #fff;
+    transition: $baseAnimation;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}
+
+.white-header {
+  .header-fb {
+    &_icon {
+      fill: #B3B3BA;
+
+      &:hover {
+        fill: $accent-color;
+      }
+    }
+  }
+}
+
+.fb-link{
+  display: flex;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+
+  width: 38px;
+    height: 38px;
+
+  .fb_icon {
+    width: 100%;
+    fill: $active-color-regular;
+    transition: $baseAnimation;
+
+    &:hover {
+      fill: $accent-color;
+    }
+  }
+}
+
+.recommended__top-buttons {
+  display: flex;
+  width: max-content;
+  padding: 2px;
+  background: #E6E6F0;
+  border-radius: 12px;
+  
+
+  .btn-news {
+    padding: 9px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: $main-color-regular;
+
+   
+  }
+
+  .btn-articles {
+    background-color: transparent;
+    border-radius: 10px;
+    padding: 9px 30px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+      color: $main-color-regular;
+
+    &:hover {
+      background-color: #F5F5FA;
+    }
+  }
+}
+
+.recommended__button-btn {
+  display: flex;
+  width: max-content;
+ 
+  background-color: $active-color-regular;
+  border-radius: 12px;
+  border: none;
+  padding: 18px 30px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #FFFFFF;
+  justify-content: center;
+
+  &:hover {
+    background-color: $active-color-hover;
+  }
+
+}
+
+.form__help-btn {
+  padding: 18px;
+  display: flex;
+  justify-content: center;
+  border: none;
+  border-radius: 12px;
+  background-color: $active-color-regular;
+  font-weight: 700;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+color: #FFFFFF;
+cursor: pointer;
+
+&:hover {
+  background-color: $active-color-hover;
+}
 }

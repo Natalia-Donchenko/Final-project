@@ -7,10 +7,14 @@
   position: relative;
 
   height: 100%;
-  margin-bottom: 50px;
 
   background: $supersoft-color-gradient;
   border-radius: 0px 0px 12px 12px;
+
+  & .container {
+    padding-bottom: 50px;
+
+  }
 
   &::before {
     content: "";
@@ -43,10 +47,15 @@
     position: relative;
 
     overflow: hidden;
+ 
   }
 
   &__hero {
+
+    position: relative;
     height: 100vh;
+    
+    border: 3px solid pink;
 
     &::before {
       content: url(../img/h.svg);
@@ -83,6 +92,9 @@
   }
 
   &__experience {
+
+    border: 3px solid pink;
+
     display: flex;
     padding-top: calc($baseIndent / 2);
     padding-bottom: calc($baseIndent / 2);

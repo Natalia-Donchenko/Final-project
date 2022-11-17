@@ -2,25 +2,18 @@
 @use '../../abstracts/mixins' as *;
 @use "sass:math";
 
-.services-header__wrapper {
+.contact-header__wrapper {
   position: relative;
 
-  height: 100%;
-  // margin-bottom: 50px;
-
-  background: $supersoft-color-gradient;
-  border-radius: 0px 0px 12px 12px;
-
-  border: 3px solid pink;
+ 
 
   & .container {
-    border: 3px solid green;
+
     padding-bottom: 50px;
   }
 
-  .services-header {
+  .contact-header {
     position: relative;
-    border: 3px solid rgb(231, 152, 6);
 
     .header {
 
@@ -50,12 +43,12 @@
          
         }
       }
-      
-      .breadcrumbs_services {
+
+      .breadcrumbs_contact {
         display: flex;
       }
 
-      .is-active_services {
+      .is-active_contact {
 
         color: $accent-color;
 
@@ -78,53 +71,7 @@
         }
 
       }
-
-      
     }
-
-    &__comparation {
-      padding-top: 132px;
-
-      @include tablet-sd {
-        padding-top: 280px;
-      }
-
-      @include tablet-hd {
-        padding-top: 176px;
-      }
-
-      & .suptitle {
-        display: none;
-      }
-    }
-
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 40px;
-    bottom: -20px;
-    right: 40px;
-
-    height: 10px;
-
-    background: #E7E7F2;
-    border-radius: 0px 0px 12px 12px;
-  }
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    left: 20px;
-    bottom: -10px;
-    right: 20px;
-
-    height: 10px;
-
-    background: #CACADB;
-    border-radius: 0px 0px 12px 12px;
-  }
-
+  
 }

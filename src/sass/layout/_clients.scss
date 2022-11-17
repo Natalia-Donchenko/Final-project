@@ -3,8 +3,12 @@
 @use "sass:math";
 
 .clients {
-  padding-top: calc($baseIndent / 2);
+  
   overflow-x: hidden;
+
+  & .container {
+    padding-top: calc($baseIndent / 2);
+  }
 
   &__title-text {
     margin-bottom: calc($baseIndent / 2);

@@ -1,0 +1,66 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use "sass:math";
+
+.form {
+  background: #F5F5FA;
+  border-radius: 12px;
+  padding: 30px;
+
+  @include tablet-hd {
+    flex-grow: 1;
+    flex: 1 1;
+  }
+
+  .gradient_title {
+    margin-bottom: 30px;
+  }
+
+  &__help {
+    display: flex;
+    flex-direction: column;
+
+
+    gap: 30px;
+
+    .form__help-massage,
+    .form__help-feedback {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .form__help-item {
+        border: 1px solid #FFFFFF;
+        border-radius: 8px;
+        padding: 15px;
+
+        &::-webkit-scrollbar {
+          display: none;
+        }
+
+
+        &:focus {
+          outline-color: $active-color-regular;
+        }
+
+        &::placeholder {
+
+          font-size: 16px;
+          line-height: 26px;
+          color: #B3B3BA;
+        }
+      }
+
+      .form__help-textarea {
+        height: 130px;
+      }
+
+    }
+
+
+
+
+  }
+
+
+}

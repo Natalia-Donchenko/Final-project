@@ -12,12 +12,20 @@
 
 @use 'layout/homePage/homepage_header';
 @use 'layout/homePage/homepage_team';
+@use 'layout/homePage/homePage_sections';
 @use 'layout/services/services_header';
+@use 'layout/publications/publications_header';
+@use 'layout/publications/publicationsd_recommended';
+@use 'layout/contact/contact_header';
+@use 'layout/contact/contact_contacts';
 @use 'layout/footer';
 @use 'layout/header';
+@use 'layout/header-white';
 @use 'layout/clients';
 @use 'layout/recommended';
 @use 'layout/comparison';
 
 @use 'components/btn';
 @use 'components/titles';
+@use 'components/breadcrumbs';
+@use 'components/form_help';

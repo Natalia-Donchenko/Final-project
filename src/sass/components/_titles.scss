@@ -129,24 +129,39 @@ span {
 
 .suptitle {
   display: flex;
+  padding: 0;
 
-  font-size: 14px;
-  line-height: 17px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  // background: transparent;
+  // border: none;
 
-  color: $active-color-regular;
+  &-text {
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 
-  transition: $baseAnimation;
+    color: $active-color-regular;
 
-  &:hover {
-    color: $accent-color;
+    transition: $baseAnimation;
   }
 
-  &::after {
-    content: "\02C3";
-    margin-left: 5px;
+  &-icon {
+    width: 12px;
+    height: 12px;
+
+    stroke: $active-color-regular;
+    fill: none;
+    
+    transition: $baseAnimation;
+  }
+
+  &:hover .suptitle-text {
+    color: $accent-color;
+    
+    & .suptitle-icon {
+      stroke: $accent-color;
+    }
   }
 }
 
@@ -163,5 +178,85 @@ span {
   line-height: 22px;
   font-weight: 400;
 
+  color: #B3B3BA;
+}
+
+.adress {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  color: $main-color-regular;
+
+  @include tablet-sd {
+    margin-bottom: 0;
+  }
+}
+
+.map {
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  color: $active-color-regular;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+
+  @include tablet-sd {
+    display: flex;
+    padding-top: 1px;
+    align-items: center;
+
+    line-height: 10px;
+
+  }
+
+  @include tablet-hd {
+    line-height: 0px;
+  }
+}
+
+
+.call {
+  display: flex;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: right;
+
+  color: $main-color-alt;
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.mail {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+
+  color: $active-color-regular;
+
+  transition: $baseAnimation;
+
+  &:hover {
+    color: $accent-color;
+  }
+}
+
+.form__help-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
   color: #B3B3BA;
 }
