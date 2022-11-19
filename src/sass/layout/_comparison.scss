@@ -3,16 +3,14 @@
 @use "sass:math";
 
 .comparison {
-
   & .suptitle {
     margin-bottom: calc($baseIndent / 6);
   }
 
   & .gradient_title {
-    
     margin-bottom: calc($baseIndent / 2);
 
-    @include tablet-hd {
+    @include tablet-sd {
       margin-bottom: $baseIndent;
     }
   }

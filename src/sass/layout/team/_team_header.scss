@@ -2,17 +2,23 @@
 @use '../../abstracts/mixins' as *;
 @use "sass:math";
 
-.contact-header__wrapper {
+.team-header__wrapper {
   position: relative;
 
   & .container {
     padding-bottom: 50px;
   }
 
-  .contact-header {
+  .team-header {
     position: relative;
+  }
 
-    .header {
+  .header {
+    .breadcrumbs_team {
+      display: flex;
+    }
+
+    .header__menu {
       .menu-item {
         & a:hover {
           color: $accent-color;
@@ -37,11 +43,7 @@
         }
       }
 
-      .breadcrumbs_contact {
-        display: flex;
-      }
-
-      .is-active_contact {
+      .is-active_team {
         color: $accent-color;
 
         &::after {

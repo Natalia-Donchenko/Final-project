@@ -3,50 +3,49 @@
 @use "sass:math";
 
 .form {
-  background: #F5F5FA;
+  padding: calc($baseIndent / 2);
+
+  background: $grey-color-bg;
   border-radius: 12px;
-  padding: 30px;
 
   @include tablet-hd {
-    flex-grow: 1;
     flex: 1 1;
+    flex-grow: 1;
   }
 
   .gradient_title {
-    margin-bottom: 30px;
+    margin-bottom: calc($baseIndent / 2);
   }
 
   &__help {
     display: flex;
     flex-direction: column;
-
-
-    gap: 30px;
+    gap: calc($baseIndent / 2);
 
     .form__help-massage,
     .form__help-feedback {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: calc($baseIndent / 4);
 
       .form__help-item {
+        padding: calc($baseIndent / 4);
+
         border: 1px solid #FFFFFF;
         border-radius: 8px;
-        padding: 15px;
 
         &::-webkit-scrollbar {
           display: none;
         }
-
 
         &:focus {
           outline-color: $active-color-regular;
         }
 
         &::placeholder {
-
           font-size: 16px;
           line-height: 26px;
+
           color: #B3B3BA;
         }
       }
@@ -54,13 +53,6 @@
       .form__help-textarea {
         height: 130px;
       }
-
     }
-
-
-
-
   }
-
-
 }

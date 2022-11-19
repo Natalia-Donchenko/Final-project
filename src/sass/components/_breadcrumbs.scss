@@ -4,37 +4,34 @@
 .breadcrumbs {
   display: flex;
   flex-direction: row;
-  align-items: stretch;
   align-items: flex-start;
-  
-  &-item {
 
+  &-item {
     display: flex;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 23px;
-    color: #FFFFFF;
     min-height: 32px;
 
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 400;
+
+    color: #FFFFFF;
 
     @include tablet-sd {
+      min-height: 60px;
+
       font-size: 36px;
       line-height: 44px;
-      min-height: 60px;
     }
 
     &::before {
-      display: flex;
-
       content: url(../img/Slash_small.svg);
 
-      margin-left: 4px;
+      display: flex;
       margin-right: 4px;
+      margin-left: 4px;
 
       @include tablet-sd {
-
         content: url(../img/Slash.svg);
-        right: 45%;
       }
     }
 
@@ -48,26 +45,24 @@
   }
 
   .header-logo {
-    
     &_link {
       display: flex;
-     width: 70px;
-    height: 32px; 
+      width: 70px;
+      height: 32px;
 
-    cursor: pointer;
+      cursor: pointer;
 
-    .header-logo_icon {
-      height: 100%;
-      --logoColor: #fff;
+      .header-logo_icon {
+        height: 100%;
+
+        --logoColor: #fff;
+      }
+
+      @include tablet-sd {
+        width: 130px;
+        height: 60px;
+      }
     }
-
-    @include tablet-sd {
-      width: 130px;
-      height: 60px;
-    }
-    }
-    
-
   }
 }
 

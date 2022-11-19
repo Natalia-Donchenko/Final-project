@@ -3,13 +3,11 @@
 @use "sass:math";
 
 .contacts__wrapper {
-  margin-top: -50px;
   position: relative;
 
+  margin-top: -50px;
 
   .container {
-
-
     padding-top: 102px;
 
     @include tablet-sd {
@@ -19,49 +17,45 @@
     @include tablet-hd {
       padding-top: 116px;
     }
-
   }
 
   .comunication {
- 
-    padding: 60px 0;
-
     display: flex;
+    padding: $baseIndent 0;
     flex-direction: column;
 
     @include tablet-sd {
-      padding-top: 60px;
+      padding-top: $baseIndent;
     }
 
     @include tablet-hd {
       flex-direction: row;
       justify-content: space-between;
     }
+
     @include desktop-sd {
-      padding-left: 120px;
-      padding-right: 120px;
+      padding-right: calc($baseIndent * 2);
+      padding-left: calc($baseIndent * 2);
     }
 
     .contacts {
-
-      padding-bottom: 30px;
       display: flex;
+      padding-bottom: calc($baseIndent / 2);
+      gap: calc($baseIndent / 2);
       flex-direction: column;
-      gap: 30px;
 
       @include tablet-hd {
+        margin-right: $baseIndent;
         padding-bottom: 0;
-        flex-grow: 1;
         flex: 1 1;
-        margin-right: 60px;
+        flex-grow: 1;
       }
 
-  
-
       .adress {
-        font-weight: 400;
         font-size: 21px;
         line-height: 30px;
+        font-weight: 400;
+
         transition: $baseAnimation;
 
         &:hover {
@@ -70,68 +64,60 @@
       }
 
       &__connection {
-        padding-top: 15px;
         display: flex;
+        padding-top: calc($baseIndent / 4);
+        gap: calc($baseIndent / 2);
         flex-direction: column;
-        border-top: 4px solid #E6E6F0;
-        gap: 30px;
+
+        border-top: 4px solid $grey-color-separator;
 
         .call {
           max-width: max-content;
-          font-weight: 400;
+
           font-size: 21px;
           line-height: 30px;
+          font-weight: 400;
         }
 
         .mail {
-          font-weight: 400;
           font-size: 21px;
           line-height: 30px;
+          font-weight: 400;
         }
       }
 
       &__fb-link {
-
         display: flex;
-        padding-top: 30px;
+        padding-top: calc($baseIndent / 2);
 
         color: $active-color-regular;
 
-
-        border-top: 4px solid #E6E6F0;
+        border-top: 4px solid $grey-color-separator;
 
         .fb-link {
           display: flex;
-
-          color: $active-color-regular;
-          font-weight: 700;
-          font-size: 12px;
-          line-height: 16px;
-          letter-spacing: 1px;
-          text-transform: uppercase;
           max-width: 153px;
           max-height: 38px;
-
-          transition: $baseAnimation;
-
-
+          gap: 10px;
+          align-items: flex-end;
           flex-grow: 1;
 
-          align-items: flex-end;
+          font-size: 12px;
+          line-height: 16px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
 
-          gap: 10px;
+          color: $active-color-regular;
 
+          transition: $baseAnimation;
 
           .fb_icon {
             display: flex;
             max-width: 38px;
             max-height: 38px;
-
-
           }
-
         }
-
 
         &:hover .fb-link {
           color: $accent-color;
@@ -140,11 +126,7 @@
             fill: $accent-color;
           }
         }
-
       }
-
     }
-
-
   }
 }

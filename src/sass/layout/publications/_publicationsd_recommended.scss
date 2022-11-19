@@ -3,16 +3,13 @@
 @use "sass:math";
 
 .publication__recommended {
-
   margin-top: -50px;
-  
   padding-top: 107px;
-
 
   .recommended {
     & .container {
-    padding-bottom: 60px;
-  }
+      padding-bottom: $baseIndent;
+    }
   }
 
   @include tablet-sd {
@@ -34,6 +31,4 @@
   .recommended__title {
     display: none;
   }
-
-  
 }

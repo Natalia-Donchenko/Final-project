@@ -40,7 +40,7 @@ span {
   font-weight: 400;
   text-align: right;
 
-  color: #B3B3BA;
+  color: $grey-color-text;
 }
 
 .experience_title {
@@ -104,7 +104,7 @@ span {
   letter-spacing: 1px;
   text-transform: uppercase;
 
-  color: #B3B3BA;
+  color: $grey-color-text;
 }
 
 .recommended-card_describe {
@@ -130,9 +130,6 @@ span {
 .suptitle {
   display: flex;
   padding: 0;
-
-  // background: transparent;
-  // border: none;
 
   &-text {
     font-size: 14px;
@@ -170,7 +167,7 @@ span {
   line-height: 20px;
   font-weight: 700;
 
-  color: #B3B3BA;
+  color: $grey-color-text;
 }
 
 .job_title {
@@ -178,7 +175,7 @@ span {
   line-height: 22px;
   font-weight: 400;
 
-  color: #B3B3BA;
+  color: $grey-color-text;
 }
 
 .adress {
@@ -214,7 +211,6 @@ span {
     align-items: center;
 
     line-height: 10px;
-
   }
 
   @include tablet-hd {
@@ -222,15 +218,16 @@ span {
   }
 }
 
-
 .call {
   display: flex;
+
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   text-align: right;
 
   color: $main-color-alt;
+
   transition: $baseAnimation;
 
   &:hover {
@@ -253,10 +250,11 @@ span {
 }
 
 .form__help-text {
-  font-weight: 700;
-  font-size: 14px;
+font-size: 14px;
   line-height: 17px;
+  font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: #B3B3BA;
+
+  color: $grey-color-text;
 }

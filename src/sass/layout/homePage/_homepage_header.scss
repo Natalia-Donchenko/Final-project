@@ -2,7 +2,6 @@
 @use '../../abstracts/mixins' as *;
 @use "sass:math";
 
-
 .homepage-header {
   position: relative;
 
@@ -10,11 +9,6 @@
 
   background: $supersoft-color-gradient;
   border-radius: 0px 0px 12px 12px;
-
-  & .container {
-    padding-bottom: 50px;
-
-  }
 
   &::before {
     content: "";
@@ -47,15 +41,12 @@
     position: relative;
 
     overflow: hidden;
- 
   }
 
   &__hero {
-
     position: relative;
+
     height: 100vh;
-    
-    border: 3px solid pink;
 
     &::before {
       content: url(../img/h.svg);
@@ -92,9 +83,6 @@
   }
 
   &__experience {
-
-    border: 3px solid pink;
-
     display: flex;
     padding-top: calc($baseIndent / 2);
     padding-bottom: calc($baseIndent / 2);
@@ -127,9 +115,9 @@
       }
 
       @include tablet-hd {
-        flex-direction: column;
         margin-right: 0;
         padding-right: $baseIndent;
+        flex-direction: column;
         justify-content: center;
         align-items: flex-end;
         overflow: visible;
@@ -145,7 +133,7 @@
         font-weight: 700;
         white-space: nowrap;
 
-        color: #B3B3BA;
+        color: $grey-color-text;
 
         transition: $baseAnimation;
 
@@ -163,7 +151,7 @@
       gap: calc($baseIndent / 2);
       flex-direction: column;
       flex-wrap: wrap;
-      
+
       border-top: 4px solid rgba(255, 255, 255, 0.3);
       word-wrap: wrap;
 

@@ -4,40 +4,30 @@
 
 .white-header {
   .header {
-
     &__contacts {
-
       &-adress {
-
         &:hover {
           color: $accent-color;
-
         }
       }
 
       &-call {
-        color: #B3B3BA;
+        color: $grey-color-text;
         transition: $baseAnimation;
 
         &:hover {
           color: $accent-color;
         }
-
       }
 
       &::before {
-
-        background-color: #F5F5FA;
-        ;
+        background-color: $grey-color-bg;
 
         @include tablet-sd {
           content: none;
         }
       }
-
-      & .header-fb {}
     }
-
 
     .is-shown__menu {
       display: flex;
@@ -46,11 +36,9 @@
     &__menu {
       &-list {
         &_items {
-
           color: $active-color-regular;
 
           .menu-item {
-
             & a {
               color: $active-color-regular;
 
@@ -64,7 +52,6 @@
             }
 
             &:hover::after {
-
               height: 2px;
 
               background-color: $accent-color;

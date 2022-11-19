@@ -6,30 +6,29 @@
   position: relative;
 
   height: 100%;
-  // margin-bottom: 50px;
 
   background: $supersoft-color-gradient;
   border-radius: 0px 0px 12px 12px;
 
-  border: 3px solid pink;
-
   & .container {
-    border: 3px solid green;
     padding-bottom: 50px;
   }
 
   .services-header {
     position: relative;
-    border: 3px solid rgb(231, 152, 6);
 
     .header {
+      &__contacts-call {
+        &:hover {
+          color: $accent-color;
+        }
+      }
 
-      .menu-item  {
-        
+      .menu-item {
         & a:hover {
           color: $accent-color;
         }
-      
+
         &:hover::after {
           content: '';
 
@@ -46,17 +45,14 @@
           @include tablet-sd {
             display: flex;
           }
-
-         
         }
       }
-      
+
       .breadcrumbs_services {
         display: flex;
       }
 
       .is-active_services {
-
         color: $accent-color;
 
         &::after {
@@ -76,10 +72,7 @@
             display: flex;
           }
         }
-
       }
-
-      
     }
 
     &__comparation {
@@ -97,7 +90,6 @@
         display: none;
       }
     }
-
   }
 
   &::before {
@@ -126,5 +118,4 @@
     background: #CACADB;
     border-radius: 0px 0px 12px 12px;
   }
-
 }

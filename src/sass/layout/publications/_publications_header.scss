@@ -4,16 +4,14 @@
 
 
 .publications-header__wrapper {
- position: relative;
-  
+  position: relative;
+
   & .container {
-   
     padding-bottom: 50px;
   }
 
   .publications-header {
     position: relative;
-  
   }
 
   .header {
@@ -22,9 +20,7 @@
     }
 
     .header__menu {
-
       .menu-item {
-
         & a:hover {
           color: $accent-color;
         }
@@ -45,13 +41,10 @@
           @include tablet-sd {
             display: flex;
           }
-
-
         }
       }
 
       .is-active_publications {
-
         color: $accent-color;
 
         &::after {
@@ -72,8 +65,6 @@
           }
         }
       }
-
     }
   }
-
 }

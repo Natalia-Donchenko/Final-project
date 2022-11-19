@@ -3,8 +3,7 @@
 @use "sass:math";
 
 .recommended {
-  background-color: #F5F5FA;
- 
+  background-color: $grey-color-bg;
 
   & .container {
 
@@ -36,7 +35,6 @@
     display: flex;
     gap: calc($baseIndent / 2);
     flex-wrap: wrap;
-
   }
 
   &-card {
@@ -53,7 +51,6 @@
     @include tablet-hd {
       flex: 1 1 calc(100% / 3 - 30px);
     }
-
 
     &_img {
       width: calc(100% + $baseIndent);
@@ -81,7 +78,7 @@
   }
 
   &__button-btn {
-    margin-top: calc($baseIndent / 2);;
+    margin-top: calc($baseIndent / 2);
+    ;
   }
-
 }

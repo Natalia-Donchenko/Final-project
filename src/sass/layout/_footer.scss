@@ -3,7 +3,7 @@
 @use "sass:math";
 
 .footer {
-  background-color: #F5F5FA;
+  background-color: $grey-color-bg;
 
   &__items {
     display: grid;
@@ -14,7 +14,7 @@
       "promo";
     align-self: center;
 
-    border-top: 2px solid #E6E6F0;
+    border-top: 2px solid $grey-color-separator;
 
     @include tablet-sd {
       padding-right: 0;
@@ -29,7 +29,6 @@
       margin-bottom: 21px;
       text-align: center;
       grid-area: place;
-      
 
       @include tablet-sd {
         display: flex;
@@ -38,18 +37,14 @@
       }
 
       .adress {
-        
         margin-bottom: calc($baseIndent / 6);
 
         @include tablet-sd {
           margin-bottom: 0;
         }
-
       }
 
       .map {
-        
-
         &::before {
           content: "";
 
@@ -59,7 +54,7 @@
           margin-right: 10px;
           margin-left: 10px;
 
-          background: #B3B3BA;
+          background: $grey-color-text;
           border-radius: 50%;
 
           @include tablet-sd {
@@ -76,7 +71,7 @@
           margin-right: 10px;
           margin-left: 10px;
 
-          background: #B3B3BA;
+          background: $grey-color-text;
           border-radius: 50%;
 
           @include tablet-sd {
@@ -104,7 +99,6 @@
       .call {
         display: flex;
 
-
         &::before {
           content: "";
 
@@ -114,7 +108,7 @@
           margin-right: 10px;
           margin-left: 10px;
 
-          background: #B3B3BA;
+          background: $grey-color-text;
           border-radius: 50%;
 
           @include tablet-sd {
@@ -132,7 +126,7 @@
           margin-right: 10px;
           margin-left: 10px;
 
-          background: #B3B3BA;
+          background: $grey-color-text;
           border-radius: 50%;
 
           @include tablet-sd {
@@ -144,8 +138,6 @@
 
       .mail {
         display: flex;
-
-        
       }
     }
 
@@ -159,11 +151,11 @@
       font-weight: 400;
       text-align: center;
 
-      color: #B3B3BA;
+      color: $grey-color-text;
 
       @include tablet-sd {
         margin: 0;
-        
+
         text-align: end;
       }
     }
