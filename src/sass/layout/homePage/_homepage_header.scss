@@ -128,8 +128,8 @@
       }
 
       .list-item {
-        font-size: 38px;
-        line-height: 46px;
+        font-size: 30px;
+        line-height: 37px;
         font-weight: 700;
         white-space: nowrap;
 
@@ -141,6 +141,11 @@
           color: $accent-color;
 
           cursor: pointer;
+        }
+
+        @include tablet-sd {
+          font-size: 38px;
+          line-height: 46px;
         }
       }
     }

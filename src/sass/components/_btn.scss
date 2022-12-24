@@ -32,6 +32,7 @@
   .is-active_ua,
   .is-active_ru,
   .is-active_en {
+    color: white;
     background-color: $accent-color;
   }
 }
@@ -49,6 +50,12 @@
         }
       }
     }
+  }
+  .is-active_ua,
+  .is-active_ru,
+  .is-active_en {
+    color: white;
+    background-color: $accent-color;
   }
 }
 
@@ -232,6 +239,8 @@
 
     cursor: pointer;
 
+    transition: $baseAnimation;
+
     &:hover {
       background-color: $grey-color-bg;
     }
@@ -254,6 +263,8 @@
   border-radius: 12px;
 
   cursor: pointer;
+
+  transition: $baseAnimation;
 
   &:hover {
     background-color: $active-color-hover;

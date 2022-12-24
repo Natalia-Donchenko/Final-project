@@ -437,6 +437,8 @@
 
               cursor: pointer;
 
+              transition: $baseAnimation;
+
               @include tablet-sd {
                 color: #fff;
               }
@@ -444,28 +446,28 @@
               @include tablet-hd {
                 color: $accent-color;
               }
-            }
-          }
 
-          &:hover::after {
-            content: '';
-
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-
-            display: none;
-            height: 2px;
-
-            background-color: rgb(255, 255, 255);
-
-            @include tablet-sd {
-              display: flex;
-            }
-
-            @include tablet-hd {
-              background-color: $accent-color;
+              &::after {
+                content: '';
+    
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+    
+                display: none;
+                height: 2px;
+    
+                background-color: rgb(255, 255, 255);
+    
+                @include tablet-sd {
+                  display: flex;
+                }
+    
+                @include tablet-hd {
+                  background-color: $accent-color;
+                }
+              }
             }
           }
         }

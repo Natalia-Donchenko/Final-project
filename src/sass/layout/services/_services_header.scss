@@ -27,25 +27,25 @@
       .menu-item {
         & a:hover {
           color: $accent-color;
-        }
 
-        &:hover::after {
-          content: '';
-
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
-
-          display: none;
-          height: 2px;
-
-          background-color: $accent-color;
-
-          @include tablet-sd {
-            display: flex;
+          &::after {
+            content: '';
+  
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            left: 0;
+  
+            display: none;
+            height: 2px;
+  
+            background-color: $accent-color;
+  
+            @include tablet-sd {
+              display: flex;
+            }
           }
-        }
+        } 
       }
 
       .breadcrumbs_services {
@@ -54,24 +54,6 @@
 
       .is-active_services {
         color: $accent-color;
-
-        &::after {
-          content: '';
-
-          position: absolute;
-          right: 0;
-          bottom: 0;
-          left: 0;
-
-          display: none;
-          height: 2px;
-
-          background-color: $accent-color;
-
-          @include tablet-sd {
-            display: flex;
-          }
-        }
       }
     }
 

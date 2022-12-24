@@ -61,23 +61,6 @@
             display: flex;
           }
         }
-
-        &::after {
-          content: "";
-
-          display: none;
-          width: 6px;
-          height: 6px;
-          margin-right: 10px;
-          margin-left: 10px;
-
-          background: $grey-color-text;
-          border-radius: 50%;
-
-          @include tablet-sd {
-            display: flex;
-          }
-        }
       }
     }
 

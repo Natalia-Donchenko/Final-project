@@ -38,6 +38,9 @@
   }
 
   &-card {
+    display: flex;
+    flex-direction: column;
+    
     padding: calc($baseIndent / 2);
     overflow: hidden;
 
@@ -75,10 +78,13 @@
       margin-top: calc($baseIndent / 4);
       padding-top: calc($baseIndent / 4);
     }
+
+    &:hover &_title {
+      color: $accent-color;
+    }
   }
 
   &__button-btn {
     margin-top: calc($baseIndent / 2);
-    ;
   }
 }

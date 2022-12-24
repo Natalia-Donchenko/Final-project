@@ -41,7 +41,6 @@
 
         @include tablet-sd {
           max-height: 500px;
-          margin-left: math.div(-$baseIndent, 2);
         }
 
         @include tablet-hd {
